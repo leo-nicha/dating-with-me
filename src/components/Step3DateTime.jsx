@@ -15,7 +15,7 @@ export default function Step3DateTime({ onNext, dateInfo, setDateInfo }) {
         <div className="relative w-full">
           <input 
             type="date" 
-            className="w-full block box-border bg-brand-cream/50 border border-brand-rose/30 rounded-2xl py-3 px-4 md:py-4 md:px-5 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark text-base min-h-[3rem] md:min-h-[3.5rem]"
+            className="w-full block box-border bg-brand-cream/50 border border-brand-rose/30 rounded-2xl py-3 px-2 md:py-4 md:px-5 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark appearance-none text-base min-h-[3rem] md:min-h-[3.5rem]"
             value={dateInfo.date}
             onChange={(e) => setDateInfo({...dateInfo, date: e.target.value})}
           />
@@ -26,7 +26,7 @@ export default function Step3DateTime({ onNext, dateInfo, setDateInfo }) {
         <label className="text-sm font-semibold text-brand-dark/80 ml-2">{t('step3.whatTime')}</label>
         <div className="relative w-full">
           <select 
-            className="w-full block box-border bg-brand-cream/50 border border-brand-rose/30 rounded-2xl py-3 px-4 md:py-4 md:px-5 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark appearance-none text-base min-h-[3rem] md:min-h-[3.5rem]"
+            className="w-full block box-border bg-brand-cream/50 border border-brand-rose/30 rounded-2xl py-3 px-2 md:py-4 md:px-5 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark appearance-none text-base min-h-[3rem] md:min-h-[3.5rem]"
             value={dateInfo.time}
             onChange={(e) => setDateInfo({...dateInfo, time: e.target.value})}
           >
