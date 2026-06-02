@@ -5,7 +5,7 @@ const resources = {
   th: {
     translation: {
       step1: {
-        title: "ไปเดทกับเรามั๊ย?",
+        title: "ไปทานข้าวเย็นกับเรามั๊ย?",
         btnYes: "ไปสิ 💖",
         btnNo: "ไม่ไป"
       },
@@ -52,7 +52,7 @@ const resources = {
   en: {
     translation: {
       step1: {
-        title: "Will you go on a date with me?",
+        title: "Will you go on a dinner with me?",
         btnYes: "Yes 💖",
         btnNo: "No"
       },
@@ -99,7 +99,7 @@ const resources = {
   zh: {
     translation: {
       step1: {
-        title: "你愿意和我约会吗？",
+        title: "你想吃晚饭和我约会吗？",
         btnYes: "愿意 💖",
         btnNo: "不要"
       },
@@ -146,7 +146,7 @@ const resources = {
   ja: {
     translation: {
       step1: {
-        title: "私とデートしてくれませんか？",
+        title: "夕食を一緒に食べませんか？",
         btnYes: "はい 💖",
         btnNo: "いいえ"
       },
@@ -193,7 +193,7 @@ const resources = {
   ko: {
     translation: {
       step1: {
-        title: "저랑 데이트 하실래요?",
+        title: "저랑 저녁 드실래요?",
         btnYes: "좋아요 💖",
         btnNo: "싫어요"
       },
