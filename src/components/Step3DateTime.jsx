@@ -10,11 +10,11 @@ export default function Step3DateTime({ onNext, dateInfo, setDateInfo }) {
       <div className="text-center text-3xl md:text-4xl mb-2">🗓️🐾</div>
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-2 md:mb-4">{t('step3.title')}</h1>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 relative">
         <label className="text-sm font-semibold text-brand-dark/80 ml-2">{t('step3.pickDay')}</label>
         <input 
           type="date" 
-          className="w-full bg-brand-cream/50 border border-brand-rose/30 rounded-2xl p-3 md:p-4 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark text-sm md:text-base"
+          className="w-full bg-brand-cream/50 border border-brand-rose/30 rounded-2xl py-3 px-4 md:py-4 md:px-5 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark text-base min-h-[3rem] md:min-h-[3.5rem]"
           value={dateInfo.date}
           onChange={(e) => setDateInfo({...dateInfo, date: e.target.value})}
         />
@@ -22,18 +22,25 @@ export default function Step3DateTime({ onNext, dateInfo, setDateInfo }) {
 
       <div className="flex flex-col gap-2">
         <label className="text-sm font-semibold text-brand-dark/80 ml-2">{t('step3.whatTime')}</label>
-        <select 
-          className="w-full bg-brand-cream/50 border border-brand-rose/30 rounded-2xl p-3 md:p-4 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark appearance-none text-sm md:text-base"
-          value={dateInfo.time}
-          onChange={(e) => setDateInfo({...dateInfo, time: e.target.value})}
-        >
-          <option value="" disabled>{t('step3.selectTime')}</option>
-          <option value="5:00 PM">{t('step3.time5')}</option>
-          <option value="6:00 PM">{t('step3.time6')}</option>
-          <option value="7:00 PM">{t('step3.time7')}</option>
-          <option value="8:00 PM">{t('step3.time8')}</option>
-          <option value="9:00 PM">{t('step3.time9')}</option>
-        </select>
+        <div className="relative">
+          <select 
+            className="w-full bg-brand-cream/50 border border-brand-rose/30 rounded-2xl py-3 px-4 md:py-4 md:px-5 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark appearance-none text-base min-h-[3rem] md:min-h-[3.5rem]"
+            value={dateInfo.time}
+            onChange={(e) => setDateInfo({...dateInfo, time: e.target.value})}
+          >
+            <option value="" disabled>{t('step3.selectTime')}</option>
+            <option value="5:00 PM">{t('step3.time5')}</option>
+            <option value="6:00 PM">{t('step3.time6')}</option>
+            <option value="7:00 PM">{t('step3.time7')}</option>
+            <option value="8:00 PM">{t('step3.time8')}</option>
+            <option value="9:00 PM">{t('step3.time9')}</option>
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-brand-rose">
+            <svg className="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
+          </div>
+        </div>
       </div>
 
       <button
