@@ -10,21 +10,23 @@ export default function Step3DateTime({ onNext, dateInfo, setDateInfo }) {
       <div className="text-center text-3xl md:text-4xl mb-2">🗓️🐾</div>
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-2 md:mb-4">{t('step3.title')}</h1>
 
-      <div className="flex flex-col gap-2 relative">
+      <div className="flex flex-col gap-2">
         <label className="text-sm font-semibold text-brand-dark/80 ml-2">{t('step3.pickDay')}</label>
-        <input 
-          type="date" 
-          className="w-full bg-brand-cream/50 border border-brand-rose/30 rounded-2xl py-3 px-4 md:py-4 md:px-5 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark text-base min-h-[3rem] md:min-h-[3.5rem]"
-          value={dateInfo.date}
-          onChange={(e) => setDateInfo({...dateInfo, date: e.target.value})}
-        />
+        <div className="relative w-full">
+          <input 
+            type="date" 
+            className="w-full block box-border bg-brand-cream/50 border border-brand-rose/30 rounded-2xl py-3 px-4 md:py-4 md:px-5 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark text-base min-h-[3rem] md:min-h-[3.5rem]"
+            value={dateInfo.date}
+            onChange={(e) => setDateInfo({...dateInfo, date: e.target.value})}
+          />
+        </div>
       </div>
 
       <div className="flex flex-col gap-2">
         <label className="text-sm font-semibold text-brand-dark/80 ml-2">{t('step3.whatTime')}</label>
-        <div className="relative">
+        <div className="relative w-full">
           <select 
-            className="w-full bg-brand-cream/50 border border-brand-rose/30 rounded-2xl py-3 px-4 md:py-4 md:px-5 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark appearance-none text-base min-h-[3rem] md:min-h-[3.5rem]"
+            className="w-full block box-border bg-brand-cream/50 border border-brand-rose/30 rounded-2xl py-3 px-4 md:py-4 md:px-5 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark appearance-none text-base min-h-[3rem] md:min-h-[3.5rem]"
             value={dateInfo.time}
             onChange={(e) => setDateInfo({...dateInfo, time: e.target.value})}
           >
