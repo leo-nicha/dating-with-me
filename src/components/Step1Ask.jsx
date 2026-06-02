@@ -17,7 +17,7 @@ export default function Step1Ask({ onNext }) {
   return (
     <div className="flex flex-col items-center gap-8" ref={containerRef}>
       <div className="text-6xl mb-4 animate-bounce">💌</div>
-      <h1 className="text-4xl md:text-5xl font-bold">
+      <h1 className="text-3xl md:text-5xl font-bold">
         {t('step1.title')}
       </h1>
       

@@ -37,7 +37,7 @@ export default function Step2Celebrate({ onNext }) {
   return (
     <div className="flex flex-col items-center gap-6">
       <div className="text-6xl mb-2">🎉</div>
-      <h1 className="text-4xl md:text-5xl font-bold">{t('step2.title')}</h1>
+      <h1 className="text-3xl md:text-5xl font-bold">{t('step2.title')}</h1>
       <p className="text-lg text-brand-dark/70 font-medium">
         {t('step2.subtitle')}
       </p>

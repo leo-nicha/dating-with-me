@@ -18,7 +18,7 @@ export default function Step4Food({ onNext, food, setFood }) {
       <div className="flex gap-2 text-2xl mb-2 text-brand-rose">
         💕 — 💕 — 💕
       </div>
-      <h1 className="text-4xl font-bold text-center">{t('step4.title')}</h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-center">{t('step4.title')}</h1>
       <p className="text-sm font-medium text-brand-dark/60 -mt-4 mb-4">
         {t('step4.subtitle')}
       </p>
@@ -37,10 +37,10 @@ export default function Step4Food({ onNext, food, setFood }) {
             />
             <label
               htmlFor={opt.id}
-              className="food-card-label flex flex-col items-center justify-center p-6 bg-white/60 backdrop-blur rounded-2xl border-2 border-transparent hover:border-brand-pink/30 hover:bg-white h-full"
+              className="food-card-label flex flex-col items-center justify-center p-4 md:p-6 bg-white/60 backdrop-blur rounded-2xl border-2 border-transparent hover:border-brand-pink/30 hover:bg-white h-full"
             >
-              <span className="text-5xl mb-3 drop-shadow-sm">{opt.icon}</span>
-              <span className="font-semibold text-brand-dark">{opt.label}</span>
+              <span className="text-4xl md:text-5xl mb-2 md:mb-3 drop-shadow-sm">{opt.icon}</span>
+              <span className="font-semibold text-brand-dark text-sm md:text-base">{opt.label}</span>
             </label>
           </div>
         ))}

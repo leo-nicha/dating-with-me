@@ -26,13 +26,13 @@ export default function Step5Summary({ dateInfo, food }) {
   };
 
   return (
-    <div className="bg-white/80 backdrop-blur p-8 rounded-3xl shadow-xl w-full max-w-sm mx-auto flex flex-col gap-6 text-left relative overflow-hidden">
+    <div className="bg-white/80 backdrop-blur p-6 md:p-8 rounded-3xl shadow-xl w-full max-w-sm mx-auto flex flex-col gap-4 md:gap-6 text-left relative overflow-hidden">
       {/* Decorative polaroid look */}
       <div className="absolute -top-4 -right-4 w-20 h-20 bg-brand-cream rotate-12 shadow-sm rounded border border-brand-rose/10 flex items-center justify-center">
         ❤️
       </div>
 
-      <h1 className="text-3xl font-bold text-center text-brand-rose">{t('step5.title')}</h1>
+      <h1 className="text-2xl md:text-3xl font-bold text-center text-brand-rose">{t('step5.title')}</h1>
       
       <p className="text-center font-medium text-brand-dark mt-2">
         {displayTime}, {t('step5.summarySubtitle')}
@@ -63,7 +63,7 @@ export default function Step5Summary({ dateInfo, food }) {
 
       <button
         onClick={handleCopy}
-        className="mt-4 bg-brand-rose hover:bg-brand-dark text-white font-bold py-4 px-8 rounded-full shadow-md transition-all active:scale-95 flex items-center justify-center gap-2"
+        className="mt-2 md:mt-4 bg-brand-rose hover:bg-brand-dark text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-full shadow-md transition-all active:scale-95 flex items-center justify-center gap-2 text-sm md:text-base"
       >
         {copied ? t('step5.btnCopied') : t('step5.btnCopy')}
       </button>

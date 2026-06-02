@@ -6,15 +6,15 @@ export default function Step3DateTime({ onNext, dateInfo, setDateInfo }) {
   const canProceed = dateInfo.date && dateInfo.time;
 
   return (
-    <div className="bg-white/80 backdrop-blur p-8 rounded-3xl shadow-xl w-full max-w-sm mx-auto flex flex-col gap-6 text-left">
-      <div className="text-center text-4xl mb-2">🗓️🐾</div>
-      <h1 className="text-3xl font-bold text-center mb-4">{t('step3.title')}</h1>
+    <div className="bg-white/80 backdrop-blur p-6 md:p-8 rounded-3xl shadow-xl w-full max-w-sm mx-auto flex flex-col gap-5 md:gap-6 text-left">
+      <div className="text-center text-3xl md:text-4xl mb-2">🗓️🐾</div>
+      <h1 className="text-2xl md:text-3xl font-bold text-center mb-2 md:mb-4">{t('step3.title')}</h1>
 
       <div className="flex flex-col gap-2">
         <label className="text-sm font-semibold text-brand-dark/80 ml-2">{t('step3.pickDay')}</label>
         <input 
           type="date" 
-          className="w-full bg-brand-cream/50 border border-brand-rose/30 rounded-2xl p-4 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark"
+          className="w-full bg-brand-cream/50 border border-brand-rose/30 rounded-2xl p-3 md:p-4 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark text-sm md:text-base"
           value={dateInfo.date}
           onChange={(e) => setDateInfo({...dateInfo, date: e.target.value})}
         />
@@ -23,7 +23,7 @@ export default function Step3DateTime({ onNext, dateInfo, setDateInfo }) {
       <div className="flex flex-col gap-2">
         <label className="text-sm font-semibold text-brand-dark/80 ml-2">{t('step3.whatTime')}</label>
         <select 
-          className="w-full bg-brand-cream/50 border border-brand-rose/30 rounded-2xl p-4 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark appearance-none"
+          className="w-full bg-brand-cream/50 border border-brand-rose/30 rounded-2xl p-3 md:p-4 outline-none focus:ring-2 focus:ring-brand-rose/50 transition-all font-medium text-brand-dark appearance-none text-sm md:text-base"
           value={dateInfo.time}
           onChange={(e) => setDateInfo({...dateInfo, time: e.target.value})}
         >
